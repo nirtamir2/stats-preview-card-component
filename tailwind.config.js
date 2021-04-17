@@ -9,7 +9,18 @@ module.exports = {
   // @see https://github.com/microsoft/WSL/issues/4739
   purge: ["./index.html", "./src/**/*.{js,jsx,ts,tsx,vue}"],
   theme: {
-    extend: {},
+    colors: {
+      veryDarkBlue: "hsl(233, 47%, 7%)",
+      darkDesaturatedBlue: "hsl(244, 38%, 16%)",
+      softViolet: "hsl(277, 64%, 61%)",
+      white: "hsl(0, 0%, 100%)",
+      white75: "hsla(0, 0%, 100%, 0.75)",
+      white60: "hsla(0, 0%, 100%, 0.6)",
+    },
+  },
+  screens: {
+    sm: "375px",
+    lg: "1440px",
   },
   variants: {},
   plugins: [],
