@@ -1,21 +1,6 @@
 import React from "react";
-
-interface IProps {
-  title: string;
-  subTitle: string;
-}
-function Box(props: IProps) {
-  const { title, subTitle } = props;
-
-  return (
-    <div className="my-4">
-      <div className="mb-0.5 text-center text-white text-xl font-bold md:text-left">
-        {title}
-      </div>
-      <div className="text-white75 text-xs tracking-widest">{subTitle}</div>
-    </div>
-  );
-}
+import styles from "./App.module.css";
+import { Box } from "./Box";
 
 export function App() {
   return (
@@ -36,13 +21,7 @@ export function App() {
             <Box title="12M+" subTitle="QUERIES" />
           </div>
         </div>
-        <div
-          style={{
-            height: 446,
-            width: 540,
-            background: `linear-gradient(hsla(277, 64%, 61%, 0.6),hsla(277, 64%, 61%, 0.6)) ,url(../frontendmentor/images/image-header-desktop.jpg)`,
-          }}
-        />
+        <div className={styles.img} />
       </main>
     </div>
   );
