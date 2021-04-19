@@ -1,11 +1,12 @@
 import React from "react";
-import styles from "./App.module.css";
+import desktopImg from "./images/image-header-desktop.jpg";
+import mobileImg from "./images/image-header-mobile.jpg";
 import { Box } from "./Box";
 
 export function App() {
   return (
     <div className="min-w-screen flex items-center justify-center p-6 min-h-screen bg-veryDarkBlue">
-      <main className="flex flex-col-reverse text-white bg-darkDesaturatedBlue rounded overflow-hidden md:flex-row">
+      <main className="flex flex-col-reverse text-white bg-darkDesaturatedBlue rounded-lg overflow-hidden md:flex-row">
         <div className="flex flex-col px-20 py-14 max-w-lg">
           <h1 className="text-3xl font-bold">
             Get <span className="text-softViolet">insights</span> that help your
@@ -21,7 +22,15 @@ export function App() {
             <Box title="12M+" subTitle="QUERIES" />
           </div>
         </div>
-        <div className={styles.img} />
+        <picture className="bg-softViolet">
+          <source media="(max-width: 980px)" srcSet={mobileImg} sizes="654w" />
+          <img
+            src={desktopImg}
+            alt=""
+            sizes="540w"
+            className="w-full h-full object-cover mix-blend-multiply"
+          />
+        </picture>
       </main>
     </div>
   );

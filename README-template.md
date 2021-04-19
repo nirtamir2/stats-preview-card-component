@@ -53,12 +53,32 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [Tailwindcss](https://tailwindcss.com/) - For styles
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
+
+- I use picture with srcSet and source - for choosing the right size img by the viewport.
+- Stretch image trick:
+  ```css
+  .stretch-image {
+    height: 100%;
+    width: 100%;
+    object-cover: cover;
+  }
+  ```
+- Coloring trick - wrap with colored container and use `mix-blend-mode: multiply`
+
+  ```css
+  .container {
+    background: violet;
+  }
+
+  .img {
+    mix-blend-mode: multiply;
+  }
+  ```
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
