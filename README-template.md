@@ -60,6 +60,20 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### What I learned
 
 - I use picture with srcSet and source - for choosing the right size img by the viewport.
+
+  ```tsx
+  <picture className="bg-softViolet">
+    {/* sizes the image width (ends with w for the real image inst*/}
+    <source media="(max-width: 980px)" srcSet={mobileImg} sizes="654w" />
+    <img
+      src={desktopImg}
+      alt=""
+      sizes="540w"
+      className="w-full h-full object-cover mix-blend-multiply"
+    />
+  </picture>
+  ```
+
 - Stretch image trick:
   ```css
   .stretch-image {
@@ -68,6 +82,9 @@ Then crop/optimize/edit your image however you like, add it to your project, and
     object-cover: cover;
   }
   ```
+
+````
+
 - Coloring trick - wrap with colored container and use `mix-blend-mode: multiply`
 
   ```css
@@ -130,3 +147,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
 **Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+````

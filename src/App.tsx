@@ -29,6 +29,7 @@ export function App() {
             alt=""
             sizes="540w"
             className="w-full h-full object-cover mix-blend-multiply"
+            style={{ opacity: 0.75 }}
           />
         </picture>
       </main>
